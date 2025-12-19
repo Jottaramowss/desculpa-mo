@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        :root {
+            --primary-color: #ff4b2b;
+            --bg-color: #1a1a1a;
+            --code-color: #f8f8f2;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--code-color);
+            font-family: 'Fira Code', 'Courier New', monospace;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .terminal {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            overflow: hidden;
+            border: 1px solid #333;
+        }
+
+        .header {
+            background: #333;
+            padding: 10px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .dot { width: 12px; height: 12px; border-radius: 50%; }
+        .red { background: #ff5f56; }
+        .yellow { background: #ffbd2e; }
+        .green { background: #27c93f; }
+
+        .content { padding: 20px; line-height: 1.6; }
+        .keyword { color: #ff79c6; }
+        .function { color: #50fa7b; }
+        .string { color: #f1fa8c; }
+        .comment { color: #6272a4; font-style: italic; }
+        
+        .cursor {
+            animation: blink 1s infinite;
+            border-left: 8px solid var(--primary-color);
+            margin-left: 5px;
+        }
+
+        @keyframes blink { 50% { opacity: 0; } }
+    </style>
+</head>
+<body>
+
+<div class="terminal">
+    <div class="header">
+        <div class="dot red"></div>
+        <div class="dot yellow"></div>
+        <div class="dot green"></div>
+    </div>
+    <div class="content">
+        <p class="comment">// Inicializando protocolo de reconciliação v2.0</p>
+        
+        <code>
+            <span class="keyword">const</span> <span class="function">meuPedido</span> = {<br>
+            &nbsp;&nbsp;erro: <span class="string">"Fui um idiota"</span>,<br>
+            &nbsp;&nbsp;causa: <span class="string">"Falha no processamento de sensibilidade"</span>,<br>
+            &nbsp;&nbsp;solucao: <span class="string">"Pedir desculpas e te dar todo amor do mundo"</span><br>
+            };<br><br>
+
+            <span class="keyword">function</span> <span class="function">tentarConsertar Tudo</span>() {<br>
+            &nbsp;&nbsp;<span class="keyword">while</span> (coracao.triste) {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">enviarFlores</span>();<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">pedirPerdao</span>();<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span> (voce.sorriu) <span class="keyword">break</span>;<br>
+            &nbsp;&nbsp;}<br>
+            }<br><br>
+
+            <span class="comment">// Executando correção crítica...</span><br>
+            <span class="function">console</span>.log(<span class="string">"Me desculpa por tudo? ❤️"</span>);
+        </code>
+
+        <div style="margin-top: 20px; color: #50fa7b;">
+            > Compilando sentimentos... [OK]<br>
+            > Verificando conexão... [PENDENTE]<br>
+            > Status: Aguardando seu "Sim" para dar deploy na nossa felicidade.<span class="cursor"></span>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
